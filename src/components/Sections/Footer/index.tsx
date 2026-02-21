@@ -1,5 +1,7 @@
 import { useEffect } from "react";
 import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
+import logo from "../../../../public/logo.svg";
+
 
 const navigationLinks = [
     { label: "Início", href: "#inicio" },
@@ -33,7 +35,7 @@ export function Footer() {
                     <div className="space-y-4">
                         <div className="flex items-center gap-2">
                             <div>
-                                <img src="/logo.svg" alt="Logo" className="h-20" />
+                                <img src={logo} alt="Logo" className="h-20" />
                             </div>
                         </div>
 

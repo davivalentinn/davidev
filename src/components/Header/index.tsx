@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { RiCustomerServiceLine, RiMenuLine, RiCloseLine } from 'react-icons/ri';
-
+import logo from "../../../public/logo.svg";
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +31,7 @@ export function Header() {
         >
             <nav className="container mx-auto px-3 sm:px-4 py-2 sm:py-3 md:py-4 flex justify-between items-center">
                 <div>
-                    <img src="/logo.svg" alt="Logo" className="h-12 sm:h-16 md:h-20" />
+                    <img src={logo} alt="Logo" className="h-12 sm:h-16 md:h-20" />
                 </div>
 
                 {/* Menu Desktop */}
