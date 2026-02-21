@@ -1,4 +1,4 @@
-import { useReveal } from '../../../hooks/useReveal.js'
+import { useReveal } from '../../../hooks/useReveal'
 import { useState } from 'react';
 
 import type { Project } from '../../../types/Project.ts'

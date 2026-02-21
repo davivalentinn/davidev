@@ -1,6 +1,6 @@
 import type { Project } from "../../../types/Project";
 import { RiGithubFill, RiInformationLine, RiRocketLine } from "react-icons/ri";
-import { useReveal } from '../../../hooks/useReveal.js'
+import { useReveal } from '../../../hooks/useReveal'
 
 
 interface Props {

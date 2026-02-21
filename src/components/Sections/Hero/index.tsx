@@ -8,7 +8,7 @@ import githubIcon from "../../../assets/icons/github.svg";
 import phpIcon from "../../../assets/icons/php.svg";
 import mysqlIcon from "../../../assets/icons/mysql.svg";
 import { RiFileFill, RiGithubFill, RiLinkedinBoxFill } from 'react-icons/ri';
-
+import type { CSSProperties } from 'react';
 
 export function Hero() {
     return (
@@ -21,11 +21,11 @@ export function Hero() {
   "
             style={{
                 // define a imagem como variável
-                ['--bg-hero']: `url(${bgHero})`,
+                '--bg-hero': `url(${bgHero})`,
                 backgroundSize: "clamp(900px, 120vw, 1500px)",
                 backgroundPosition:
                     "left clamp(-300px, -20vw, -100px) top 250px",
-            }}
+            } as CSSProperties}
         >
             {/* container do conteúdo - NOME E TECNOLOGIAS */}
             <div className="container mx-auto px-4 flex-1 flex items-center">

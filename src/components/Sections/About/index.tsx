@@ -1,6 +1,6 @@
 import logoUninter from '../../../assets/icons/uninter.svg';
 import logoIfac from '../../../assets/icons/ifac.png';
-import {useReveal} from '../../../hooks/useReveal.js'
+import {useReveal} from '../../../hooks/useReveal'
 
 
 
