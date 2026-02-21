@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #090909;
+  /* background-color: #1c1c1c; */
+}
+
+p {
+  color: white;
+}
+
+.line-reveal {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1.2s ease-out;
+}
+
+.line-reveal.active {
+  transform: scaleX(1);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(60px) scale(.96);
+  transition:
+    opacity .9s cubic-bezier(.2,.8,.2,1),
+    transform .9s cubic-bezier(.2,.8,.2,1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+
+.reveal-left {
+  transform: translateX(-60px);
+}
+
+.reveal-right {
+  transform: translateX(60px);
+}
+
+.reveal-scale {
+  transform: scale(.85);
+}
+
+
+.timeline-dot {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.timeline-dot.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@theme {
+  --font-main: Poppins, sans-serif;
+  --font-body: Inter, sans-serif;
+  --font-code: JetBrains Mono, sans-serif;
+  --bg-button: #F57F17;
+  --text-main: #FFD600;
+  --bg-main: #FFD600;
+  --bg-card: #0C0C0C;
+  --bg-tech: #3E3E3E;
+}
+
+@keyframes blinkAlt {
+
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.blink {
+  animation: blinkAlt 1.2s infinite;
+}
+
+.blink-delay {
+  animation: blinkAlt 1.6s infinite;
+  animation-delay: 0.8s;
+}
+
+
+/* ===== ANIMAÇÃO LINHAS PROJETOS ===== */
+
+.project-line {
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 1.2s ease;
+}
+
+.project-line.active {
+  transform: scaleX(1);
+}
+
+/* bolinha surge suave */
+.project-dot {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.6s ease 0.8s;
+}
+
+.project-dot.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Animação Shimmer para Skills */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skill-card-shimmer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 214, 0, 0) 0%,
+    rgba(255, 214, 0, 0.3) 50%,
+    rgba(255, 214, 0, 0) 100%
+  );
+  animation: shimmer 3s infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 0.5rem;
+}
+
+.skill-card-shimmer:hover::before {
+  opacity: 1;
+}
+
+/* Animação Back to Top */
+@keyframes bobbing {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.back-to-top-icon {
+  animation: bobbing 2s ease-in-out infinite;
+}
+
