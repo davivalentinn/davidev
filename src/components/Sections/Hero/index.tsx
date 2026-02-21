@@ -96,7 +96,7 @@ export function Hero() {
                         </div>
 
                         <div className="relative cursor-pointer overflow-hidden group flex items-center justify-center gap-2 sm:gap-2.5 bg-[var(--bg-button)] px-3 sm:px-5 lg:px-4 py-2.5 sm:py-3 lg:py-1.5 rounded flex-1 sm:flex-end">
-                            <a href="/curriculo.pdf" download="Davi-Valetins-Curriculo.pdf" className="uppercase font-main text-white text-sm sm:text-base lg:text-lg font-bold relative z-10">
+                            <a href={`${import.meta.env.BASE_URL}curriculo.pdf`} download="Davi-Valetins-Curriculo.pdf" className="uppercase font-main text-white text-sm sm:text-base lg:text-lg font-bold relative z-10">
                                 Currículo
                             </a>
                             <RiFileFill className="text-white relative z-10 text-base sm:text-lg lg:text-xl" />

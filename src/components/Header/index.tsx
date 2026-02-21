@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { RiCustomerServiceLine, RiMenuLine, RiCloseLine } from 'react-icons/ri';
-import logo from "../../../public/logo.svg";
+import logo from '../../assets/icons/logo.svg';
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
